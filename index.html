@@ -1,70 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Farheen Shaik | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Farheen Shaik | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="slider" id="slider">
 
-    <!-- SLIDE 1: INTRO -->
-    <section id="home" class="slide">
-        <div class="content fade-up">
-            <h1>Farheen Shaik</h1>
-            <h3>Data Analytics | Data Science Enthusiast</h3>
-            <p>
-                3rd-year B.Tech student passionate about analyzing data
-                and transforming it into meaningful insights using Python, SQL, and visualization tools.
-            </p>
-        </div>
-    </section>
+  <section class="slide">
+    <h1>Farheen Shaik</h1>
+    <h2>Aspiring Data Scientist | Full Stack Developer</h2>
+    <p><i class="fas fa-location-dot icon"></i> Hyderabad, India</p>
+  </section>
 
-    <!-- SLIDE 2: SKILLS -->
-    <section id="skills" class="slide">
-        <div class="content fade-left">
-            <h2>Skills</h2>
-            <div class="skill-list">
-                <span>Python (Pandas, Matplotlib)</span>
-                <span>SQL (MySQL)</span>
-                <span>Excel & Reporting</span>
-                <span>Data Cleaning & EDA</span>
-                <span>Time Series Analysis</span>
-                <span>Customer Segmentation (RFM)</span>
-            </div>
-        </div>
-    </section>
+  <section class="slide">
+    <h2 class="section-title">About Me</h2>
+    <div class="title-underline"></div>
+    <p>
+      Hi, I’m Farheen, a passionate Data Science and Full Stack Development enthusiast.
+      I enjoy transforming data into insights and building user-friendly applications.
+    </p>
+  </section>
 
-    <!-- SLIDE 3: PROJECTS -->
-    <section id="projects" class="slide">
-        <div class="content fade-right">
-            <h2>Project</h2>
-            <div class="project-card">
-                <h3>Sales Data Analysis & Reporting</h3>
-                <p>
-                    Analyzed retail sales data to identify trends, top customers, and customer segments using
-                    time-series analysis and RFM modeling.
-                </p>
-                <p><strong>Tools:</strong> Python, SQL, Excel</p>
-            </div>
-        </div>
-    </section>
+  <section class="slide">
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+    <div class="title-underline"></div>
+    <p>
+      <strong>B.Tech – Computer Science Engineering</strong><br>
+      Telangana<br>
+      GPA: <strong>9.62 / 10</strong>
+    </p>
+  </section>
 
-    <!-- SLIDE 4: CONTACT -->
-    <section id="contact" class="slide">
-        <div class="content fade-up">
-            <h2>Contact</h2>
-            <p>Email: your-email@gmail.com</p>
-            <p>GitHub: https://github.com/your-username</p>
-        </div>
-    </section>
+  <section class="slide">
+    <h2 class="section-title">Certifications</h2>
+    <div class="title-underline"></div>
+
+    <div class="cert-container">
+      <div class="cert-card">
+        <div class="icon-circle"><i class="fas fa-file-excel"></i></div>
+        <h3>Advanced Excel</h3>
+        <p>Data Analysis</p>
+      </div>
+
+      <div class="cert-card">
+        <div class="icon-circle"><i class="fas fa-chart-column"></i></div>
+        <h3>Power BI</h3>
+        <p>Microsoft</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title">Projects</h2>
+    <div class="title-underline"></div>
+
+    <div class="cert-container">
+      <div class="cert-card">
+        <div class="project-header"><i class="fas fa-chart-line"></i></div>
+        <h3>Sales Data Analysis</h3>
+        <p>Python, Excel, Power BI</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2 class="section-title">Contact</h2>
+    <div class="title-underline"></div>
+    <p><i class="fas fa-envelope"></i> farheen.email@example.com</p>
+  </section>
+
+</div>
+
+<div class="nav-buttons">
+  <button onclick="prevSlide()">◀</button>
+  <button onclick="nextSlide()">▶</button>
+</div>
+
+<script>
+  let index = 0;
+  const slider = document.getElementById("slider");
+
+  function nextSlide() {
+    if (index < 5) index++;
+    slider.style.transform = `translateX(-${index * 100}vw)`;
+  }
+
+  function prevSlide() {
+    if (index > 0) index--;
+    slider.style.transform = `translateX(-${index * 100}vw)`;
+  }
+</script>
 
 </body>
 </html>
