@@ -1,60 +1,166 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f8;
-    color: #222;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #6366f1;
+    --secondary: #0f172a;
+    --accent: #22d3ee;
+    --bg: #f8fafc;
+    --card: #ffffff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: #1e293b;
+}
+
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
-    background: #111827;
-}
-
-.navbar a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
+    align-items: center;
+    padding: 18px 50px;
+    background: var(--secondary);
 }
 
 .logo {
-    color: #38bdf8;
+    color: var(--accent);
+    font-weight: 700;
 }
 
+.navbar a {
+    color: #e5e7eb;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: var(--accent);
+}
+
+/* HERO */
 .hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(to right, #2563eb, #1e40af);
+    padding: 90px 15%;
+    background: linear-gradient(120deg, #6366f1, #22d3ee);
     color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
+    margin-top: 30px;
+    padding: 14px 32px;
     background: white;
-    color: #1e40af;
+    color: var(--primary);
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 25px;
+    font-weight: 600;
 }
 
-.page {
+/* SECTION BASE */
+.section {
+    padding: 80px 15%;
+}
+
+/* CANVA-STYLE HEADING */
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: var(--primary);
+}
+
+.section-subtitle {
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+/* ABOUT CARD */
+.about-card {
+    background: var(--card);
     padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* SKILLS */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background: linear-gradient(135deg, #eef2ff, #ecfeff);
+    padding: 18px;
+    text-align: center;
+    border-radius: 16px;
+    font-weight: 600;
+}
+
+/* PROJECTS */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
 .project-card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: var(--card);
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
-.skill-grid span {
-    background: #e0f2fe;
-    padding: 8px 15px;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 20px;
+.project-card h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
 }
+
+.project-card ul {
+    margin: 10px 0 20px 20px;
+}
+
+.project-card a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* CERTIFICATIONS */
+.cert-card {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    padding: 25px 30px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+.contact-box {
+    background: var(--secondary);
+    color: white;
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+}
+
